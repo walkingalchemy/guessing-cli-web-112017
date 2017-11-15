@@ -1,3 +1,5 @@
+require 'pry'
+
 # Code your solution here!
 def run_guessing_game
   prng = Random.new
@@ -11,6 +13,7 @@ def run_guessing_game
       break
     else
       if input.to_i == computer_guess
+        binding.pry
         puts "You guessed the correct number!"
       else
         puts "The computer guessed #{computer_guess}."
