@@ -9,7 +9,7 @@ def run_guessing_game
     input = gets.chomp
     if input.downcase == "exit"
       puts "Goodbye!"
-      break 
+      break
     elsif input.to_i == computer_guess
       # binding.pry
       puts "You guessed the correct number!"
