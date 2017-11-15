@@ -2,22 +2,19 @@ require 'pry'
 
 # Code your solution here!
 def run_guessing_game
-  prng = Random.new
-  puts "Guess a number between 1 and 6."
   input = ""
-  computer_guess = prng.rand(6)+1
   while input
+    puts "Guess a number between 1 and 6."
+    computer_guess = rand(1..6)
     input = gets.chomp
-    if input == "exit"
+    if input.downcase == "exit"
       puts "Goodbye!"
-      break
+      break 
+    elsif input.to_i == computer_guess
+      # binding.pry
+      puts "You guessed the correct number!"
     else
-      if input.to_i == computer_guess
-        # binding.pry
-        puts "You guessed the correct number!"
-      else
-        puts "The computer guessed #{computer_guess}."
-      end
+      puts "The computer guessed #{computer_guess}."
     end
   end
 end
