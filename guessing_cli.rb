@@ -5,7 +5,7 @@ def run_guessing_game
   input = ""
   while input
     input = gets.chomp
-    computer_guess = prng.rand(6)
+    computer_guess = prng.rand(6)+1
     if input == "exit"
       puts "Goodbye!"
       break
