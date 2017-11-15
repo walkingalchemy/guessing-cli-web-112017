@@ -8,7 +8,7 @@ def run_guessing_game
     computer_guess = prng.rand(6)
     if input == "exit"
       puts "Goodbye!"
-      return
+      break
     else
       if input.to_i == computer_guess
         puts "You guessed the correct number!"
