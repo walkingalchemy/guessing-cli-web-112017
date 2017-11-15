@@ -5,9 +5,9 @@ def run_guessing_game
   prng = Random.new
   puts "Guess a number between 1 and 6."
   input = ""
+  computer_guess = prng.rand(6)+1
   while input
     input = gets.chomp
-    computer_guess = prng.rand(6)+1
     if input == "exit"
       puts "Goodbye!"
       break
